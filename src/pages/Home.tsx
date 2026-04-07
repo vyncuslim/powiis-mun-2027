@@ -174,9 +174,13 @@ export default function Home() {
       </section>
 
       <section className="py-8 px-6 bg-white border-y border-brand-navy/8">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-brand-navy/38">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brand-navy/38">
           <p className="text-[11px] uppercase tracking-[0.3em] font-bold">Supported by</p>
-          {['POWIIS', 'Student Council', 'Academic Excellence', 'Leadership'].map((item) => (
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#faf6ee] border border-brand-navy/8">
+            <Logo size="sm" />
+            <span className="font-display text-2xl uppercase text-brand-navy/70">POWIIS</span>
+          </div>
+          {['Student Council', 'Academic Excellence', 'Leadership'].map((item) => (
             <span key={item} className="font-display text-2xl uppercase">
               {item}
             </span>
