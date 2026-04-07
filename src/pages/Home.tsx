@@ -10,6 +10,7 @@ import {
   Instagram,
 } from 'lucide-react';
 import { Logo } from '../components/Logo';
+import { ProtectedTeamImage } from '../components/ProtectedTeamImage';
 import { COMMITTEES, SECRETARIAT } from '../constants';
 
 const criteria = [
@@ -125,10 +126,11 @@ export default function Home() {
             <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-brand-gold/25 blur-2xl" />
             <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-stretch">
               <div className="bg-white rounded-[2rem] p-5 shadow-xl border border-brand-navy/8 relative">
-                <img
+                <ProtectedTeamImage
                   src="/team/vyncus-lim.jpeg"
                   alt="POWIIS MUN student leader"
-                  className="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
+                  className="rounded-[1.5rem]"
+                  imageClassName="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
                 />
                 <div className="grid grid-cols-2 gap-3 mt-4">
                   <div className="rounded-2xl bg-[#fff8df] px-4 py-3">
@@ -149,10 +151,11 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-4">
                 <div className="rounded-[1.75rem] overflow-hidden border border-brand-navy/8 shadow-sm bg-white p-3">
-                  <img
+                  <ProtectedTeamImage
                     src="/team/lee-jia-en.jpeg"
                     alt="POWIIS MUN delegate portrait"
-                    className="w-full aspect-[4/5] object-cover rounded-[1.25rem]"
+                    className="rounded-[1.25rem]"
+                    imageClassName="w-full aspect-[4/5] object-cover rounded-[1.25rem]"
                   />
                 </div>
                 <div className="rounded-[1.75rem] bg-brand-navy text-white p-6 shadow-sm">
@@ -362,10 +365,11 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             {featuredTeam.map((member) => (
               <div key={member.id} className="rounded-[2rem] bg-white p-4 border border-brand-navy/8 shadow-sm">
-                <img
+                <ProtectedTeamImage
                   src={member.image}
                   alt={member.name}
-                  className="w-full aspect-[3/4] object-cover rounded-[1.5rem] mb-4"
+                  className="rounded-[1.5rem] mb-4"
+                  imageClassName="w-full aspect-[3/4] object-cover rounded-[1.5rem]"
                 />
                 <h3 className="font-display font-black uppercase text-lg leading-tight">
                   {member.name}

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Globe, Target, Heart, Award, BookOpen, Lightbulb } from 'lucide-react';
+import { ProtectedTeamImage } from '../components/ProtectedTeamImage';
 
 const values = [
   {
@@ -82,10 +83,11 @@ export default function AboutUs() {
             className="grid grid-cols-[1.2fr_0.8fr] gap-4"
           >
             <div className="bg-white rounded-[2rem] p-4 border border-brand-navy/8 shadow-sm">
-              <img
+              <ProtectedTeamImage
                 src="/team/vyncus-lim.jpeg"
                 alt="POWIIS MUN leadership"
-                className="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
+                className="rounded-[1.5rem]"
+                imageClassName="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
               />
             </div>
             <div className="flex flex-col gap-4">

@@ -1,9 +1,18 @@
 import { TeamMember, Resource, Committee } from './types';
 
+const teamNameFromImage = (imagePath: string) =>
+  imagePath
+    .split('/')
+    .pop()
+    ?.replace(/\.[^.]+$/, '')
+    .split('-')
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ') ?? '';
+
 export const SECRETARIAT: TeamMember[] = [
   {
     id: '1',
-    name: 'Vyncus Lim',
+    name: teamNameFromImage('/team/vyncus-lim.jpeg'),
     position: 'Secretary General',
     quote: 'Acta non verba.',
     image: '/team/vyncus-lim.jpeg',
@@ -15,7 +24,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '2',
-    name: 'Lim Zi Xuan',
+    name: teamNameFromImage('/team/lim-zi-xuan.jpeg'),
     position: 'Deputy Secretary General',
     quote: 'Diplomacy is the path to peace.',
     image: '/team/lim-zi-xuan.jpeg',
@@ -23,7 +32,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Tan Zi Yi',
+    name: teamNameFromImage('/team/tan-zi-yi.jpeg'),
     position: 'USG of Academics',
     quote: 'Academic excellence is our priority.',
     image: '/team/tan-zi-yi.jpeg',
@@ -31,7 +40,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '4',
-    name: 'Ng Zi Xuan',
+    name: teamNameFromImage('/team/ng-zi-xuan.jpeg'),
     position: 'USG of Finance',
     quote: 'Fiscal responsibility ensures sustainability.',
     image: '/team/ng-zi-xuan.jpeg',
@@ -39,7 +48,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '5',
-    name: 'Afzan',
+    name: teamNameFromImage('/team/afzan.jpeg'),
     position: 'USG of Operations',
     quote: 'Efficiency is the foundation of success.',
     image: '/team/afzan.jpeg',
@@ -47,7 +56,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '6',
-    name: 'Lee Jia En',
+    name: teamNameFromImage('/team/lee-jia-en.jpeg'),
     position: 'USG of Logistics',
     quote: 'Smooth operations lead to great experiences.',
     image: '/team/lee-jia-en.jpeg',
@@ -55,7 +64,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '7',
-    name: 'Wong Xin Yi',
+    name: teamNameFromImage('/team/wong-xin-yi.jpeg'),
     position: 'USG of PR & Marketing',
     quote: 'Connecting the world through communication.',
     image: '/team/wong-xin-yi.jpeg',
@@ -63,7 +72,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '8',
-    name: 'Chew Mei Ling',
+    name: teamNameFromImage('/team/chew-mei-ling.jpeg'),
     position: 'USG of Delegate Affairs',
     quote: 'Empowering delegates to reach their potential.',
     image: '/team/chew-mei-ling.jpeg',
@@ -71,7 +80,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '9',
-    name: 'Tan Wei Ling',
+    name: teamNameFromImage('/team/tan-wei-ling.jpeg'),
     position: 'USG of IT',
     quote: 'Technology as a bridge for global understanding.',
     image: '/team/tan-wei-ling.jpeg',
@@ -79,7 +88,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '10',
-    name: 'Lim Sze En',
+    name: teamNameFromImage('/team/lim-sze-en.jpeg'),
     position: 'USG of Outreach',
     quote: 'Expanding our horizons, one connection at a time.',
     image: '/team/lim-sze-en.jpeg',
@@ -87,7 +96,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '11',
-    name: 'Ng Jia Yi',
+    name: teamNameFromImage('/team/ng-jia-yi.jpeg'),
     position: 'USG of Welfare',
     quote: 'Ensuring every delegate feels at home.',
     image: '/team/ng-jia-yi.jpeg',
@@ -95,7 +104,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '12',
-    name: 'Saisa',
+    name: teamNameFromImage('/team/saisa.jpeg'),
     position: 'Secretariat Member',
     quote: 'Showing up with discipline and purpose.',
     image: '/team/saisa.jpeg',
