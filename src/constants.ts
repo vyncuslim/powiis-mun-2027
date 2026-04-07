@@ -5,7 +5,7 @@ export const SECRETARIAT: TeamMember[] = [
     id: '1',
     name: 'Lea',
     position: 'Secretary General',
-    quote: '',
+    quote: 'i understand why MUNers retire early now',
     image: '/team/afzan-azmin.jpeg',
     category: 'Core',
   },

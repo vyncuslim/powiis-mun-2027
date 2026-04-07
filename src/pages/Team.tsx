@@ -174,22 +174,6 @@ export default function Team() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        <div className="mt-32 p-12 rounded-[3rem] bg-brand-navy text-brand-cream text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-display font-black mb-6 uppercase">Join the Team</h2>
-            <p className="opacity-60 mb-10 max-w-xl mx-auto text-lg">
-              We are currently looking for passionate student chairs and press members. Applications open soon.
-            </p>
-            <a 
-              href="mailto:secretariat@powiismun.com"
-              className="inline-block px-10 py-5 bg-brand-gold text-brand-navy rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl"
-            >
-              Apply Now
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
