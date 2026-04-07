@@ -137,10 +137,12 @@ export default function Team() {
                 </div>
 
                 <div className="md:w-3/5 p-12 overflow-y-auto max-h-[80vh]">
-                  <div className="mb-8">
-                    <p className="text-brand-gold font-display font-black text-4xl italic mb-4">"{selectedMember.quote}"</p>
-                    <div className="h-1 w-12 bg-brand-gold" />
-                  </div>
+                  {selectedMember.quote && (
+                    <div className="mb-8">
+                      <p className="text-brand-gold font-display font-black text-4xl italic mb-4">"{selectedMember.quote}"</p>
+                      <div className="h-1 w-12 bg-brand-gold" />
+                    </div>
+                  )}
                   
                   <div className="space-y-6 text-brand-navy/70 leading-relaxed font-serif italic text-lg mb-10">
                     {selectedMember.bio ? (
