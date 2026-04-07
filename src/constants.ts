@@ -48,7 +48,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '5',
-    name: teamNameFromImage('/team/afzan.jpeg'),
+    name: 'Lea',
     position: 'USG of Operations',
     quote: 'Efficiency is the foundation of success.',
     image: '/team/afzan.jpeg',
