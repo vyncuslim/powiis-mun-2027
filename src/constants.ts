@@ -6,7 +6,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Vyncus Lim',
     position: 'Secretary General',
     quote: 'Acta non verba.',
-    image: 'input_file_9.png',
+    image: '/team/vyncus-lim.jpeg',
     category: 'Core',
     linkedin: 'https://www.linkedin.com/in/vyncus-lim-761300375/',
     instagram: 'https://www.instagram.com/vyncuslim',
@@ -18,7 +18,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Lim Zi Xuan',
     position: 'Deputy Secretary General',
     quote: 'Diplomacy is the path to peace.',
-    image: 'input_file_0.png',
+    image: '/team/lim-zi-xuan.jpeg',
     category: 'Core',
   },
   {
@@ -26,7 +26,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Tan Zi Yi',
     position: 'USG of Academics',
     quote: 'Academic excellence is our priority.',
-    image: 'input_file_1.png',
+    image: '/team/tan-zi-yi.jpeg',
     category: 'Academics',
   },
   {
@@ -34,7 +34,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Ng Zi Xuan',
     position: 'USG of Finance',
     quote: 'Fiscal responsibility ensures sustainability.',
-    image: 'input_file_3.png',
+    image: '/team/ng-zi-xuan.jpeg',
     category: 'Finance',
   },
   {
@@ -42,7 +42,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Afzan',
     position: 'USG of Operations',
     quote: 'Efficiency is the foundation of success.',
-    image: 'input_file_2.png',
+    image: '/team/afzan.jpeg',
     category: 'Core',
   },
   {
@@ -50,7 +50,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Lee Jia En',
     position: 'USG of Logistics',
     quote: 'Smooth operations lead to great experiences.',
-    image: 'input_file_4.png',
+    image: '/team/lee-jia-en.jpeg',
     category: 'Logistics',
   },
   {
@@ -58,7 +58,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Wong Xin Yi',
     position: 'USG of PR & Marketing',
     quote: 'Connecting the world through communication.',
-    image: 'input_file_5.png',
+    image: '/team/wong-xin-yi.jpeg',
     category: 'PR',
   },
   {
@@ -66,7 +66,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Chew Mei Ling',
     position: 'USG of Delegate Affairs',
     quote: 'Empowering delegates to reach their potential.',
-    image: 'input_file_6.png',
+    image: '/team/chew-mei-ling.jpeg',
     category: 'Delegates',
   },
   {
@@ -74,7 +74,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Tan Wei Ling',
     position: 'USG of IT',
     quote: 'Technology as a bridge for global understanding.',
-    image: 'input_file_7.png',
+    image: '/team/tan-wei-ling.jpeg',
     category: 'Core',
   },
   {
@@ -82,7 +82,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Lim Sze En',
     position: 'USG of Outreach',
     quote: 'Expanding our horizons, one connection at a time.',
-    image: 'input_file_8.png',
+    image: '/team/lim-sze-en.jpeg',
     category: 'PR',
   },
   {
@@ -90,7 +90,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Ng Jia Yi',
     position: 'USG of Welfare',
     quote: 'Ensuring every delegate feels at home.',
-    image: 'input_file_10.png',
+    image: '/team/ng-jia-yi.jpeg',
     category: 'Delegates',
   },
 ];

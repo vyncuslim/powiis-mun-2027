@@ -4,6 +4,16 @@ import { X, Linkedin, Instagram, Globe } from 'lucide-react';
 import { SECRETARIAT } from '../constants';
 import { TeamMember as TeamMemberType } from '../types';
 
+const fallbackHeadshot = '/picture.jpeg';
+
+function handleImageError(event: React.SyntheticEvent<HTMLImageElement>) {
+  const image = event.currentTarget;
+  if (image.src.endsWith(fallbackHeadshot)) {
+    return;
+  }
+  image.src = fallbackHeadshot;
+}
+
 interface TeamMemberCardProps {
   member: TeamMemberType;
   onClick: () => void;
@@ -21,6 +31,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, onClick }) => (
         alt={member.name} 
         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
         referrerPolicy="no-referrer"
+        onError={handleImageError}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
         <p className="text-brand-gold text-xs font-bold uppercase tracking-widest">View Profile</p>
@@ -92,6 +103,7 @@ export default function Team() {
                     alt={selectedMember.name} 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
                   <div className="absolute bottom-8 left-8">
