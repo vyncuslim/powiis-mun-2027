@@ -110,6 +110,14 @@ export const SECRETARIAT: TeamMember[] = [
     image: '/team/saisa.jpeg',
     category: 'Core',
   },
+  {
+    id: '13',
+    name: teamNameFromImage('/team/aron.png'),
+    position: 'Secretariat Member',
+    quote: 'Calm focus builds strong performance.',
+    image: '/team/aron.png',
+    category: 'Core',
+  },
 ];
 
 export const RESOURCES: Resource[] = [
