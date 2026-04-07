@@ -13,8 +13,8 @@ export const SECRETARIAT: TeamMember[] = [
   {
     id: '1',
     name: teamNameFromImage('/team/vyncus-lim.jpeg'),
-    position: 'Secretary General',
-    quote: 'Acta non verba.',
+    position: 'Head of IT',
+    quote: 'Every clause carries intention; every decision shapes consequence.',
     image: '/team/vyncus-lim.jpeg',
     category: 'Core',
     linkedin: 'https://www.linkedin.com/in/vyncus-lim-761300375/',
