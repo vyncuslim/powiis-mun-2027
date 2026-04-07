@@ -21,7 +21,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, onClick }) => (
         src={member.image} 
         alt={member.name} 
         className="w-full h-full"
-        imageClassName="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+        imageClassName="w-full h-full object-cover transition-all duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
         <p className="text-brand-gold text-xs font-bold uppercase tracking-widest">View Profile</p>
