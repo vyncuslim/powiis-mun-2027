@@ -130,7 +130,7 @@ export default function Home() {
                   src="/team/vyncus-lim.jpeg"
                   alt="POWIIS MUN student leader"
                   className="rounded-[1.5rem]"
-                  imageClassName="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
+                  imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.5rem]"
                 />
                 <div className="grid grid-cols-2 gap-3 mt-4">
                   <div className="rounded-2xl bg-[#fff8df] px-4 py-3">
@@ -155,16 +155,18 @@ export default function Home() {
                     src="/team/lee-jia-en.jpeg"
                     alt="POWIIS MUN delegate portrait"
                     className="rounded-[1.25rem]"
-                    imageClassName="w-full aspect-[4/5] object-cover rounded-[1.25rem]"
+                    imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.25rem]"
                   />
                 </div>
                 <div className="rounded-[1.75rem] bg-brand-navy text-white p-6 shadow-sm">
                   <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-white/55 mb-2">
                     Supported by
                   </p>
-                  <div className="space-y-2 font-display font-semibold text-2xl uppercase leading-none">
-                    <p>POWIIS</p>
-                    <p className="text-brand-gold">Student Leadership</p>
+                  <div className="space-y-2">
+                    <p className="font-display font-semibold text-2xl uppercase leading-none">POWIIS</p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-white/60">
+                      Prince of Wales Island International School
+                    </p>
                   </div>
                 </div>
               </div>
@@ -176,15 +178,9 @@ export default function Home() {
       <section className="py-8 px-6 bg-white border-y border-brand-navy/8">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brand-navy/38">
           <p className="text-[11px] uppercase tracking-[0.3em] font-bold">Supported by</p>
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#faf6ee] border border-brand-navy/8">
-            <Logo size="sm" />
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-[#faf6ee] border border-brand-navy/8">
             <span className="font-display text-2xl uppercase text-brand-navy/70">POWIIS</span>
           </div>
-          {['Student Council', 'Academic Excellence', 'Leadership'].map((item) => (
-            <span key={item} className="font-display text-2xl uppercase">
-              {item}
-            </span>
-          ))}
         </div>
       </section>
 

@@ -14,7 +14,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Sachinn',
     position: 'Deputy Secretary General',
     quote: '\ud83d\udc4b',
-    image: '/team/sachinn.png',
+    image: '/picture.jpeg',
     category: 'Core',
   },
   {
