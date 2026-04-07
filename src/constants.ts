@@ -63,12 +63,6 @@ export const SECRETARIAT: TeamMember[] = [
     position: 'Head of IT',
     quote: 'Every clause carries intention; every decision shapes consequence.',
     image: '/team/vyncus-lim.jpeg',
-    photos: [
-      '/team/vyncus-lim.jpeg',
-      '/team/vyncus/dubai-sign.jpeg',
-      '/team/vyncus/dubai-frame.png',
-      '/team/vyncus/traditional-lane.png',
-    ],
     category: 'IT',
     linkedin: 'https://www.linkedin.com/in/vyncus-lim-761300375/',
     instagram: 'https://www.instagram.com/vyncuslim',
