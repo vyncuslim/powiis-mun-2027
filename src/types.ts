@@ -4,6 +4,7 @@ export interface TeamMember {
   position: string;
   quote: string;
   image: string;
+  photos?: string[];
   category: 'Core' | 'Academics' | 'Marketing' | 'Conference' | 'IT' | 'Finance' | 'Logistics' | 'PR' | 'Delegates';
   linkedin?: string;
   instagram?: string;
