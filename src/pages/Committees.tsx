@@ -1,144 +1,141 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { COMMITTEES } from '../constants';
 
 export default function Committees() {
   return (
-    <div className="pt-32 pb-24 px-6 bg-brand-cream min-h-screen">
-      <div className="max-w-7xl mx-auto">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
-        >
-          <div className="inline-block px-4 py-1 rounded-full border border-brand-gold/30 text-brand-gold text-[10px] uppercase tracking-[0.3em] font-bold mb-6">
-            Academic Debate
-          </div>
-          <h1 className="text-6xl md:text-8xl font-display font-black mb-6 uppercase text-brand-navy">
-            OUR <span className="text-brand-gold italic font-serif">COMMITTEES</span>
-          </h1>
-          <p className="text-xl font-serif italic text-brand-navy/60 max-w-2xl mx-auto">
-            Explore the diverse range of committees at POWIIS MUN 2027, each tackling critical global issues.
+    <div className="pt-36 pb-24 px-6 bg-[#f8f3e8] min-h-screen text-brand-navy">
+      <div className="max-w-6xl mx-auto">
+        <section className="text-center max-w-4xl mx-auto mb-16">
+          <p className="text-[12px] uppercase tracking-[0.38em] font-bold text-brand-navy/45 mb-4">
+            Committees
           </p>
-        </motion.div>
+          <h1 className="text-5xl md:text-7xl font-display font-semibold uppercase leading-[0.9] mb-5">
+            Explore the academic
+            <br />
+            heart of the conference
+          </h1>
+          <p className="text-[17px] leading-8 text-brand-navy/68">
+            POWIIS MUN committees are designed to give delegates a structured,
+            serious, and engaging debate experience across a range of global
+            issues.
+          </p>
+        </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {COMMITTEES.map((committee, i) => (
-            <motion.div 
+        <section className="grid lg:grid-cols-2 gap-6 mb-20">
+          {COMMITTEES.map((committee, index) => (
+            <motion.article
               key={committee.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="group bg-white rounded-[2rem] overflow-hidden shadow-xl border border-brand-navy/5 flex flex-col"
+              transition={{ delay: index * 0.06 }}
+              className="bg-white rounded-[2rem] border border-brand-navy/8 shadow-sm overflow-hidden"
             >
-              <div className="aspect-video relative overflow-hidden">
-                <img 
-                  src={committee.image} 
-                  alt={committee.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-brand-navy/20 group-hover:bg-brand-navy/40 transition-colors" />
-                <div className="absolute top-6 left-6 bg-brand-gold text-brand-navy px-6 py-2 rounded-full font-display font-black text-xl">
-                  {committee.name}
+              <img
+                src={committee.image}
+                alt={committee.name}
+                className="w-full aspect-[16/9] object-cover"
+                referrerPolicy="no-referrer"
+              />
+              <div className="p-8">
+                <div className="flex items-center justify-between gap-4 mb-4">
+                  <p className="text-[11px] uppercase tracking-[0.28em] font-bold text-brand-gold">
+                    {committee.name}
+                  </p>
+                  <span className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/40">
+                    Open Committee
+                  </span>
                 </div>
-              </div>
-              <div className="p-10 flex-grow flex flex-col">
-                <h3 className="text-2xl font-display font-black uppercase mb-4 text-brand-navy group-hover:text-brand-gold transition-colors">
+                <h2 className="text-3xl md:text-4xl font-display font-semibold uppercase leading-[0.95] mb-4">
                   {committee.topic}
-                </h3>
-                <p className="text-brand-navy/60 text-sm leading-relaxed mb-8">
-                  {committee.description || `Delegates in the ${committee.name} will engage in rigorous debate to address the complexities of ${committee.topic.toLowerCase()}, seeking innovative and sustainable solutions.`}
+                </h2>
+                <p className="text-brand-navy/66 leading-8 mb-6">
+                  {committee.description}
                 </p>
-                
                 {committee.chairs && (
-                  <div className="mb-8">
-                    <p className="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-3">Chaired By</p>
+                  <div className="mb-6">
+                    <p className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/40 mb-3">
+                      Chairs
+                    </p>
                     <div className="flex flex-wrap gap-2">
-                      {committee.chairs.map((chair, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-brand-navy/5 rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-navy">
+                      {committee.chairs.map((chair) => (
+                        <span
+                          key={chair}
+                          className="rounded-full bg-[#faf6ee] border border-brand-navy/8 px-4 py-2 text-[11px] uppercase tracking-[0.16em] font-bold"
+                        >
                           {chair}
                         </span>
                       ))}
                     </div>
                   </div>
                 )}
-
-                <div className="mt-auto flex justify-between items-center">
-                  <button className="text-xs uppercase tracking-widest font-black text-brand-navy hover:text-brand-gold transition-colors flex items-center gap-2">
-                    View Study Guide <span>→</span>
-                  </button>
-                  <div className="h-px flex-grow mx-6 bg-brand-navy/10" />
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Available</span>
+                <div className="flex items-center justify-between border-t border-brand-navy/8 pt-5">
+                  <span className="text-sm text-brand-navy/55">
+                    Study guide and topic details will be released ahead of the conference.
+                  </span>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
-        </div>
+        </section>
 
-        {/* Committee Selection Tip */}
-        <div className="mt-32 grid md:grid-cols-2 gap-16 items-center mb-32">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-display font-black uppercase mb-8 leading-tight">
-              HOW TO CHOOSE YOUR <br/>
-              <span className="text-brand-gold italic font-serif">COMMITTEE?</span>
+        <section className="grid md:grid-cols-2 gap-6 mb-20">
+          <div className="bg-white rounded-[2rem] border border-brand-navy/8 shadow-sm p-9">
+            <p className="text-[11px] uppercase tracking-[0.28em] font-bold text-brand-navy/45 mb-4">
+              Choosing a committee
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase leading-[0.95] mb-4">
+              How to decide where you fit best
             </h2>
-            <div className="space-y-6 text-brand-navy/70 leading-relaxed">
-              <p>
-                Choosing the right committee is crucial for your MUN experience. Consider your interests, experience level, and the topics being debated.
-              </p>
-              <div className="space-y-4">
-                {[
-                  { title: "Interest", desc: "Choose a topic that you are passionate about or want to learn more about." },
-                  { title: "Experience", desc: "If you are a beginner, consider a larger committee like UNHRC. For more challenge, try UNSC." },
-                  { title: "Research", desc: "Look at the study guides to see which topic resonates with your research style." }
-                ].map((tip, i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="w-6 h-6 rounded-full bg-brand-gold/20 flex items-center justify-center shrink-0 mt-1">
-                      <div className="w-2 h-2 rounded-full bg-brand-gold" />
-                    </div>
-                    <div>
-                      <h4 className="font-display font-black uppercase text-sm mb-1">{tip.title}</h4>
-                      <p className="text-xs">{tip.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <p className="text-brand-navy/66 leading-8 mb-5">
+              Start with your interests, then think about the type of debate you
+              enjoy. Some committees are broad and policy-driven, while others
+              focus on urgent crises and sharper negotiation.
+            </p>
+            <div className="space-y-4">
+              {[
+                'Choose a topic you genuinely want to research.',
+                'Consider whether you want a larger or more specialised committee.',
+                'Read the study materials when released before finalising your choice.',
+              ].map((tip) => (
+                <div key={tip} className="flex gap-3 items-start">
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand-gold mt-2 shrink-0" />
+                  <p className="text-brand-navy/66 leading-7">{tip}</p>
+                </div>
+              ))}
             </div>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
-              <img 
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000" 
-                alt="Committee Session" 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          </motion.div>
-        </div>
+          </div>
 
-        <div className="mt-32 p-16 rounded-[4rem] bg-brand-navy text-brand-cream text-center relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5 pointer-events-none">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-black uppercase">MUN</div>
+          <div className="bg-brand-navy rounded-[2rem] text-white p-9 shadow-sm">
+            <p className="text-[11px] uppercase tracking-[0.28em] font-bold text-white/45 mb-4">
+              Ready to debate?
+            </p>
+            <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase leading-[0.95] mb-4">
+              Start your MUN journey with POWIIS
+            </h2>
+            <p className="text-white/75 leading-8 mb-8">
+              Explore the conference, choose the committee that suits you best,
+              and register your interest for the next edition.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://forms.gle/your-form-id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-gold text-brand-navy text-xs font-bold uppercase tracking-[0.2em]"
+              >
+                Register now
+              </a>
+              <Link
+                to="/resources"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-white/20 text-xs font-bold uppercase tracking-[0.2em] text-white"
+              >
+                View resources
+              </Link>
+            </div>
           </div>
-          <div className="relative z-10">
-            <h2 className="text-4xl md:text-6xl font-display font-black mb-8 uppercase">Ready to Debate?</h2>
-            <p className="text-xl font-serif italic mb-12 text-brand-gold/80">Choose your committee and start your journey.</p>
-            <button className="px-12 py-6 bg-brand-gold text-brand-navy rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-all shadow-2xl">
-              Register Now
-            </button>
-          </div>
-        </div>
+        </section>
       </div>
     </div>
   );

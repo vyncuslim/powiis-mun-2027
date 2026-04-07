@@ -93,6 +93,14 @@ export const SECRETARIAT: TeamMember[] = [
     image: '/team/ng-jia-yi.jpeg',
     category: 'Delegates',
   },
+  {
+    id: '12',
+    name: 'Saisa',
+    position: 'Secretariat Member',
+    quote: 'Showing up with discipline and purpose.',
+    image: '/team/saisa.jpeg',
+    category: 'Core',
+  },
 ];
 
 export const RESOURCES: Resource[] = [
