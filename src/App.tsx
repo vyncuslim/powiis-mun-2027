@@ -68,7 +68,7 @@ export default function App() {
                     <Mail size={16} />
                     <span>powiismun@powiis.edu.my</span>
                   </a>
-                  <a href="https://www.instagram.com/powiismun" className="flex items-center gap-3 hover:text-brand-gold transition-colors text-xs">
+              <a href="https://www.instagram.com/powiismunc27?igsh=MTVmMDJpMjcxYThhdQ%3D%3D&utm_source=qr" className="flex items-center gap-3 hover:text-brand-gold transition-colors text-xs">
                     <Instagram size={16} />
                     <span>@powiismun</span>
                   </a>

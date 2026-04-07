@@ -415,7 +415,7 @@ export default function Home() {
               <p className="text-brand-navy/65 break-all">powiismun@powiis.edu.my</p>
             </a>
             <a
-              href="https://www.instagram.com/powiismun"
+                href="https://www.instagram.com/powiismunc27?igsh=MTVmMDJpMjcxYThhdQ%3D%3D&utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-8 shadow-sm hover:border-brand-gold transition-colors"
