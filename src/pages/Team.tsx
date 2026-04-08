@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, Linkedin, Instagram, Globe } from 'lucide-react';
+import { X } from 'lucide-react';
 import { SECRETARIAT } from '../constants';
 import { ProtectedTeamImage } from '../components/ProtectedTeamImage';
 import { TeamMember as TeamMemberType } from '../types';
@@ -149,24 +149,6 @@ export default function Team() {
                       <p>{selectedMember.bio}</p>
                     ) : (
                       <p>Dedicated to fostering a collaborative and academically rigorous environment at POWIIS MUN 2027. With a focus on diplomacy and critical thinking, our team works to ensure every delegate has a meaningful experience.</p>
-                    )}
-                  </div>
-
-                  <div className="flex gap-6">
-                    {selectedMember.linkedin && (
-                      <a href={selectedMember.linkedin} target="_blank" rel="noopener noreferrer" className="text-brand-navy/40 hover:text-brand-gold transition-colors">
-                        <Linkedin size={24} />
-                      </a>
-                    )}
-                    {selectedMember.instagram && (
-                      <a href={selectedMember.instagram} target="_blank" rel="noopener noreferrer" className="text-brand-navy/40 hover:text-brand-gold transition-colors">
-                        <Instagram size={24} />
-                      </a>
-                    )}
-                    {selectedMember.website && (
-                      <a href={selectedMember.website} target="_blank" rel="noopener noreferrer" className="text-brand-navy/40 hover:text-brand-gold transition-colors">
-                        <Globe size={24} />
-                      </a>
                     )}
                   </div>
                 </div>
