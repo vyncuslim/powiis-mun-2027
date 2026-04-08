@@ -53,7 +53,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-brand-navy/10 shadow-sm mb-8">
               <Logo size="sm" />
               <span className="text-[11px] uppercase tracking-[0.28em] font-bold text-brand-navy/60">
-                Model United Nations by POWIIS
+                Prince of Wales Island International School
               </span>
             </div>
 
@@ -61,12 +61,12 @@ export default function Home() {
               Discover the world of diplomacy with
             </p>
             <h1 className="text-6xl md:text-8xl font-display font-semibold uppercase leading-[0.88] tracking-tight mb-5">
-              Model United
+              POWIIS
               <br />
-              Nations
+              MUN
             </h1>
             <p className="text-2xl md:text-3xl font-display italic text-brand-navy/70 mb-8 normal-case">
-              by POWIIS
+              Penang 2027
             </p>
             <p className="max-w-2xl text-[17px] leading-8 text-brand-navy/68 mb-12">
               Join a student-led conference where delegates represent nations,
@@ -162,11 +162,14 @@ export default function Home() {
                   <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-white/55 mb-2">
                     Supported by
                   </p>
-                  <div className="space-y-2">
-                    <p className="font-display font-semibold text-2xl uppercase leading-none">POWIIS</p>
-                    <p className="text-xs uppercase tracking-[0.24em] text-white/60">
-                      Prince of Wales Island International School
-                    </p>
+                  <div className="flex items-center gap-3">
+                    <Logo size="sm" className="bg-white/95" />
+                    <div>
+                      <p className="font-display font-semibold text-2xl uppercase leading-none">POWIIS</p>
+                      <p className="text-[10px] uppercase tracking-[0.24em] text-white/60 mt-1">
+                        Prince of Wales Island International School
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -178,7 +181,8 @@ export default function Home() {
       <section className="py-8 px-6 bg-white border-y border-brand-navy/8">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brand-navy/38">
           <p className="text-[11px] uppercase tracking-[0.3em] font-bold">Supported by</p>
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-[#faf6ee] border border-brand-navy/8">
+          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#faf6ee] border border-brand-navy/8">
+            <Logo size="sm" />
             <span className="font-display text-2xl uppercase text-brand-navy/70">POWIIS</span>
           </div>
         </div>

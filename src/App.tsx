@@ -31,7 +31,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-brand-navy text-brand-cream selection:bg-brand-gold selection:text-brand-navy flex flex-col">
+      <div className="min-h-screen bg-[#f8f3e8] text-brand-navy selection:bg-brand-gold selection:text-brand-navy flex flex-col">
         <Navbar />
         
         <main className="flex-grow">
@@ -45,15 +45,15 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="py-16 px-6 bg-brand-navy text-brand-cream/40 border-t border-white/5">
+        <footer className="py-16 px-6 bg-[#fcfaf4] text-brand-navy/50 border-t border-brand-navy/8">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-12 items-start mb-16">
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
                   <Logo size="sm" />
                   <div>
-                    <p className="font-display font-black text-brand-cream/80 tracking-wider">POWIIS MUN</p>
-                    <p className="text-[10px] uppercase tracking-widest">Penang, Malaysia</p>
+                    <p className="font-display font-semibold text-brand-navy tracking-wide text-2xl leading-none">POWIIS</p>
+                    <p className="text-[10px] uppercase tracking-[0.24em] text-brand-navy/45 mt-1">Prince of Wales Island International School</p>
                   </div>
                 </div>
                 <p className="text-xs leading-relaxed max-w-xs">
@@ -62,7 +62,7 @@ export default function App() {
               </div>
               
               <div className="flex flex-col gap-6">
-                <h4 className="font-display font-black uppercase text-brand-cream/80 text-sm tracking-widest">Contact</h4>
+                <h4 className="font-display font-semibold uppercase text-brand-navy text-sm tracking-[0.24em]">Contact</h4>
                 <div className="space-y-4">
                   <a href="mailto:powiismun@powiis.edu.my" className="flex items-center gap-3 hover:text-brand-gold transition-colors text-xs">
                     <Mail size={16} />
@@ -76,7 +76,7 @@ export default function App() {
               </div>
 
               <div className="flex flex-col gap-6">
-                <h4 className="font-display font-black uppercase text-brand-cream/80 text-sm tracking-widest">Quick Links</h4>
+                <h4 className="font-display font-semibold uppercase text-brand-navy text-sm tracking-[0.24em]">Quick Links</h4>
                 <div className="flex flex-col gap-3 text-xs">
                   <Link to="/about-us" className="hover:text-brand-gold transition-colors">About POWIIS MUN</Link>
                   <Link to="/committees" className="hover:text-brand-gold transition-colors">Academic Committees</Link>
@@ -87,13 +87,13 @@ export default function App() {
               </div>
             </div>
 
-            <div className="h-px w-full bg-white/5 mb-8" />
+            <div className="h-px w-full bg-brand-navy/8 mb-8" />
             
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <p className="text-[10px] uppercase tracking-[0.3em] font-bold">
+              <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-brand-navy/45">
                 &copy; 2027 POWIIS MUNC. All rights reserved.
               </p>
-              <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold">
+              <div className="flex gap-8 text-[10px] uppercase tracking-widest font-bold text-brand-navy/55">
                 <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
                 <Link to="/about-us" className="hover:text-brand-gold transition-colors">About</Link>
                 <Link to="/committees" className="hover:text-brand-gold transition-colors">Committees</Link>
