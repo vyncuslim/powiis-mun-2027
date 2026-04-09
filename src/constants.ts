@@ -46,7 +46,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Vridhi',
     position: 'Head of Conference Affairs',
     quote: '',
-    image: '/picture.jpeg',
+    image: '/team/vridhi.jpeg',
     category: 'Conference',
   },
   {
