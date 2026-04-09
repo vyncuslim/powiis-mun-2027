@@ -157,6 +157,14 @@ export const SECRETARIAT: TeamMember[] = [
     image: '/team/wei-jun.jpeg',
     category: 'Conference',
   },
+  {
+    id: '20',
+    name: 'Sim Jia Xin',
+    position: 'member of conference affairs',
+    quote: 'The only book I want to finish is my passport.',
+    image: '/picture.jpeg',
+    category: 'Conference',
+  },
 ];
 
 export const RESOURCES: Resource[] = [
