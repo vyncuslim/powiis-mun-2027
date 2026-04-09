@@ -162,7 +162,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Sim Jia Xin',
     position: 'member of conference affairs',
     quote: 'The only book I want to finish is my passport.',
-    image: '/picture.jpeg',
+    image: '/team/sim-jia-xin.jpeg',
     category: 'Conference',
   },
 ];
