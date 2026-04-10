@@ -170,7 +170,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Romrumpa ( Ping )',
     position: 'member of marketing/design',
     quote: 'it will all make sense one day',
-    image: '/picture.jpeg',
+    image: '/team/romrumpa-ping.jpeg',
     category: 'PR',
   },
 ];
