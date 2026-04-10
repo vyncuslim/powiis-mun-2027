@@ -8,26 +8,28 @@ import {
   MapPin,
   ExternalLink,
   Instagram,
+  Globe,
+  Linkedin,
 } from 'lucide-react';
 import { Logo } from '../components/Logo';
 import { ProtectedTeamImage } from '../components/ProtectedTeamImage';
-import { COMMITTEES, SECRETARIAT } from '../constants';
+import { COMMITTEES } from '../constants';
 
 const criteria = [
   {
-    title: 'Who Can Join',
+    title: 'Who can join',
     description:
       'POWIIS MUN welcomes secondary school students who are curious about current affairs, diplomacy, and structured debate.',
   },
   {
-    title: 'Language',
+    title: 'What they gain',
     description:
-      'All sessions are conducted in English, including speeches, moderated caucuses, and written resolutions.',
+      'Delegates strengthen public speaking, negotiation, research, and confidence in formal academic discussion.',
   },
   {
-    title: 'Dress Code',
+    title: 'How to prepare',
     description:
-      'Delegates are expected to attend in formal Western Business Attire to maintain a professional committee atmosphere.',
+      'Read your topic background, understand the rules of procedure, and practise building practical, well-researched arguments.',
   },
 ];
 
@@ -39,165 +41,151 @@ const benefits = [
 ];
 
 export default function Home() {
-  const featuredTeam = SECRETARIAT.slice(0, 4);
-
   return (
     <>
-      <section className="pt-36 pb-24 px-6 bg-[#f8f3e8] text-brand-navy">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-14 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-brand-navy/10 shadow-sm mb-8">
-              <Logo size="sm" />
-              <span className="text-[11px] uppercase tracking-[0.28em] font-bold text-brand-navy/60">
+      <section className="pt-32 pb-16 px-6 bg-[#f8f3e8] text-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 mb-8">
+            <div className="rounded-[1.85rem] border border-brand-navy/8 bg-white px-8 py-6 shadow-sm">
+              <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-brand-navy/45 mb-3">
+                2027
+              </p>
+              <p className="text-brand-navy/62 text-lg">
+                Official dates to be announced
+              </p>
+            </div>
+            <div className="rounded-[1.85rem] border border-brand-navy/8 bg-white px-8 py-6 shadow-sm">
+              <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-brand-navy/45 mb-3">
+                POWIIS
+              </p>
+              <p className="text-brand-navy/62 text-lg">
                 Prince of Wales Island International School
-              </span>
+              </p>
             </div>
+          </div>
 
-            <p className="text-[12px] uppercase tracking-[0.38em] font-bold text-brand-navy/45 mb-5">
-              Discover the world of diplomacy with
-            </p>
-            <h1 className="text-6xl md:text-8xl font-display font-semibold uppercase leading-[0.88] tracking-tight mb-5">
-              POWIIS
-              <br />
-              MUN
-            </h1>
-            <p className="text-2xl md:text-3xl font-display italic text-brand-navy/70 mb-8 normal-case">
-              Penang 2027
-            </p>
-            <p className="max-w-2xl text-[17px] leading-8 text-brand-navy/68 mb-12">
-              Join a student-led conference where delegates represent nations,
-              debate global issues, and build the confidence to speak with
-              clarity, empathy, and purpose.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a
-                href="https://forms.gle/your-form-id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-navy text-white font-bold uppercase tracking-[0.2em] text-xs hover:bg-brand-gold hover:text-brand-navy transition-colors"
-              >
-                I want to join!
-              </a>
-              <Link
-                to="/committees"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full border border-brand-navy/20 bg-white text-brand-navy font-bold uppercase tracking-[0.2em] text-xs hover:border-brand-gold hover:text-brand-gold transition-colors"
-              >
-                View committees
-              </Link>
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-[1.75rem] p-6 border border-brand-navy/8 shadow-sm">
-                <div className="flex items-center gap-2 text-brand-gold mb-2">
-                  <Calendar size={18} />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.25em]">
-                    Date
-                  </span>
-                </div>
-                <p className="font-display font-black text-2xl uppercase">2027</p>
-                <p className="text-sm text-brand-navy/55">Official dates to be announced</p>
+          <div className="grid lg:grid-cols-[1.08fr_0.92fr] gap-10 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
+              <p className="text-[11px] uppercase tracking-[0.36em] font-bold text-brand-navy/45 mb-6">
+                Discover the world of diplomacy with
+              </p>
+              <h1 className="font-display text-[clamp(4.2rem,10vw,8.6rem)] leading-[0.9] uppercase tracking-tight text-brand-navy mb-4">
+                Model United
+                <br />
+                Nations
+              </h1>
+              <p className="font-display italic text-3xl md:text-4xl text-brand-navy/68 mb-10">
+                by POWIIS
+              </p>
+              <p className="max-w-3xl text-[19px] leading-9 text-brand-navy/68 mb-10">
+                POWIIS MUN is a student-led conference where delegates represent
+                countries and debate global issues through formal, thoughtful,
+                academically grounded discussion.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://forms.gle/your-form-id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-navy px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-white hover:bg-brand-gold hover:text-brand-navy transition-colors"
+                >
+                  I want to join!
+                </a>
+                <Link
+                  to="/committees"
+                  className="inline-flex items-center justify-center rounded-full border border-brand-navy/12 bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.22em] text-brand-navy hover:border-brand-gold hover:text-brand-gold transition-colors"
+                >
+                  View committees
+                </Link>
               </div>
-              <div className="bg-white rounded-[1.75rem] p-6 border border-brand-navy/8 shadow-sm">
-                <div className="flex items-center gap-2 text-brand-gold mb-2">
-                  <MapPin size={18} />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.25em]">
-                    Venue
-                  </span>
-                </div>
-                <p className="font-display font-black text-2xl uppercase">POWIIS</p>
-                <p className="text-sm text-brand-navy/55">
-                  Prince of Wales Island International School
-                </p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="relative"
-          >
-            <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-brand-gold/25 blur-2xl" />
-            <div className="grid grid-cols-[1.2fr_0.8fr] gap-4 items-stretch">
-              <div className="bg-white rounded-[2rem] p-5 shadow-xl border border-brand-navy/8 relative">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.08 }}
+              className="grid grid-cols-[1.05fr_0.95fr] gap-4"
+            >
+              <div className="rounded-[2.1rem] border border-brand-navy/8 bg-white p-5 shadow-sm">
                 <ProtectedTeamImage
                   src="/team/vyncus-lim.jpeg"
                   alt="POWIIS MUN student leader"
-                  className="rounded-[1.5rem]"
-                  imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.5rem]"
+                  className="rounded-[1.6rem]"
+                  imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.6rem]"
                 />
-                <div className="grid grid-cols-2 gap-3 mt-4">
-                  <div className="rounded-2xl bg-[#fff8df] px-4 py-3">
-                    <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-brand-navy/45 mb-1">
-                      Student-Led
-                    </p>
-                    <p className="font-display font-black text-xl uppercase">
-                      Academic Debate
-                    </p>
-                  </div>
-                  <div className="rounded-2xl bg-[#eef3fb] px-4 py-3">
-                    <p className="text-[10px] uppercase tracking-[0.25em] font-bold text-brand-navy/45 mb-1">
-                      Contact
-                    </p>
-                    <p className="font-bold text-sm break-all">powiismun@powiis.edu.my</p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="rounded-[1.75rem] overflow-hidden border border-brand-navy/8 shadow-sm bg-white p-3">
-                  <ProtectedTeamImage
-                    src="/team/lee-jia-en.jpeg"
-                    alt="POWIIS MUN delegate portrait"
-                    className="rounded-[1.25rem]"
-                    imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.25rem]"
-                  />
-                </div>
-                <div className="rounded-[1.75rem] bg-brand-navy text-white p-6 shadow-sm">
-                  <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-white/55 mb-2">
-                    Supported by
+                <div className="mt-4 rounded-[1.3rem] bg-[#f7f0de] px-5 py-4">
+                  <p className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/45 mb-2">
+                    Student-led conference
                   </p>
-                  <div className="flex items-center gap-3">
-                    <Logo size="sm" className="bg-white/95" />
-                    <div>
-                      <p className="font-display font-semibold text-2xl uppercase leading-none">POWIIS</p>
-                      <p className="text-[10px] uppercase tracking-[0.24em] text-white/60 mt-1">
-                        Prince of Wales Island International School
-                      </p>
-                    </div>
-                  </div>
+                  <p className="font-display text-3xl uppercase leading-none">
+                    Academic
+                    <br />
+                    debate
+                  </p>
                 </div>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      <section className="py-8 px-6 bg-white border-y border-brand-navy/8">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brand-navy/38">
-          <p className="text-[11px] uppercase tracking-[0.3em] font-bold">Supported by</p>
-          <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#faf6ee] border border-brand-navy/8">
-            <Logo size="sm" />
-            <span className="font-display text-2xl uppercase text-brand-navy/70">POWIIS</span>
+              <div className="flex flex-col gap-4">
+                <div className="rounded-[1.85rem] border border-brand-navy/8 bg-white px-6 py-7 shadow-sm">
+                  <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-brand-navy/45 mb-3">
+                    Our mission
+                  </p>
+                  <p className="font-display text-[clamp(2rem,4vw,3.3rem)] leading-[0.92] uppercase text-brand-navy">
+                    Build
+                    <br />
+                    confident
+                    <br />
+                    global
+                    <br />
+                    citizens
+                  </p>
+                </div>
+
+                <div className="rounded-[1.85rem] bg-brand-navy px-6 py-7 text-white shadow-sm">
+                  <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-white/55 mb-3">
+                    Our vision
+                  </p>
+                  <p className="text-[18px] leading-10 text-white/82">
+                    A conference culture where diplomacy, empathy, and academic
+                    excellence all matter equally.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-white text-brand-navy">
-        <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mb-12">
-            <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-4">
-              Essential Criteria For Participation
+      <section className="px-6 pb-8 bg-[#f8f3e8]">
+        <div className="max-w-7xl mx-auto rounded-[1.9rem] border border-brand-navy/8 bg-white px-6 py-5 shadow-sm">
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-brand-navy/46">
+            <p className="text-[10px] uppercase tracking-[0.28em] font-bold">
+              Supported by
             </p>
-            <h2 className="text-4xl md:text-5xl font-display font-black uppercase leading-tight mb-4">
-              Who should join POWIIS MUN?
+            <div className="inline-flex items-center gap-3">
+              <Logo size="sm" />
+              <span className="font-display text-3xl uppercase text-brand-navy/78">
+                POWIIS
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-white text-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mb-12">
+            <p className="text-[11px] uppercase tracking-[0.34em] font-bold text-brand-navy/45 mb-5">
+              Essential criteria for participation
+            </p>
+            <h2 className="font-display text-[clamp(2.9rem,6vw,5.3rem)] leading-[0.94] uppercase mb-6">
+              Why should you join the model united nations by POWIIS?
             </h2>
-            <p className="text-lg text-brand-navy/65 leading-relaxed">
+            <p className="max-w-4xl text-[19px] leading-9 text-brand-navy/66">
               Whether you are completely new to MUN or already experienced in
               committee debate, the conference is designed to be welcoming,
               formal, and academically rewarding.
@@ -211,117 +199,114 @@ export default function Home() {
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-9 shadow-sm"
+                transition={{ delay: index * 0.07 }}
+                className="rounded-[2rem] border border-brand-navy/8 bg-[#faf7ef] p-8 shadow-sm"
               >
-                <div className="w-10 h-10 rounded-full bg-brand-gold/25 flex items-center justify-center mb-5">
-                  <Check size={18} className="text-brand-navy" />
+                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-full bg-brand-gold/20">
+                  <Check size={18} />
                 </div>
-                <h3 className="text-2xl font-display font-black uppercase mb-3">
+                <h3 className="font-display text-3xl uppercase leading-none mb-4">
                   {item.title}
                 </h3>
-                <p className="text-brand-navy/65 leading-relaxed">{item.description}</p>
+                <p className="text-brand-navy/66 leading-8">{item.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-[#f8f3e8] text-brand-navy">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-[1fr_0.9fr] gap-12 items-start">
+      <section className="py-20 px-6 bg-[#f8f3e8] text-brand-navy">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_0.95fr] gap-8 items-start">
           <div>
-            <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-4">
-              Why Should You Join?
+            <p className="text-[11px] uppercase tracking-[0.34em] font-bold text-brand-navy/45 mb-5">
+              Upcoming model united nations conferences by POWIIS
             </p>
-            <h2 className="text-4xl md:text-6xl font-display font-semibold uppercase leading-[0.95] mb-6">
+            <h2 className="font-display text-[clamp(2.8rem,5.8vw,5rem)] leading-[0.94] uppercase mb-6">
               Experience academic debate at POWIIS MUN
             </h2>
-            <p className="text-lg text-brand-navy/65 leading-relaxed mb-6">
-              POWIIS MUN is a student-led conference where delegates represent
-              countries and discuss real-world international issues through
-              formal parliamentary procedure.
+            <p className="text-[18px] leading-9 text-brand-navy/66 mb-8 max-w-3xl">
+              Join high school delegates from across the region to discuss
+              real-world issues through formal Model United Nations procedure.
             </p>
-            <p className="text-lg text-brand-navy/65 leading-relaxed mb-8">
-              Delegates leave with stronger research habits, more confidence in
-              public speaking, and a better understanding of collaboration,
-              negotiation, and global politics.
-            </p>
+
             <div className="grid sm:grid-cols-2 gap-4">
               {benefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 rounded-2xl bg-white px-5 py-4 border border-brand-navy/8"
+                  className="rounded-[1.4rem] border border-brand-navy/8 bg-white px-5 py-4 shadow-sm"
                 >
-                  <div className="w-8 h-8 rounded-full bg-brand-gold/25 flex items-center justify-center shrink-0">
-                    <Check size={16} />
-                  </div>
-                  <p className="font-semibold text-brand-navy/75">{benefit}</p>
+                  <p className="text-brand-navy/74 font-semibold">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-white p-10 border border-brand-navy/8 shadow-sm">
-            <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-5">
-              Upcoming POWIIS MUN Conference
+          <div className="rounded-[2.1rem] border border-brand-navy/8 bg-white p-8 shadow-sm">
+            <p className="text-[10px] uppercase tracking-[0.28em] font-bold text-brand-navy/45 mb-5">
+              Event details
             </p>
-            <div className="space-y-7">
+            <div className="space-y-6">
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-brand-navy/45 mb-2">
-                  Date
-                </p>
-                <p className="font-display font-black text-2xl uppercase">To Be Confirmed</p>
+                <div className="flex items-center gap-2 text-brand-gold mb-2">
+                  <Calendar size={16} />
+                  <span className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/45">
+                    Date
+                  </span>
+                </div>
+                <p className="font-display text-3xl uppercase">To be confirmed</p>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-brand-navy/45 mb-2">
-                  Venue
-                </p>
-                <p className="font-display font-black text-2xl uppercase">
+                <div className="flex items-center gap-2 text-brand-gold mb-2">
+                  <MapPin size={16} />
+                  <span className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/45">
+                    Venue
+                  </span>
+                </div>
+                <p className="font-display text-3xl uppercase leading-[1.05]">
                   Prince of Wales Island International School
                 </p>
-                <p className="text-brand-navy/65 mt-2">
-                  83 Lintang Bayan Lepas, 11900 Bayan Lepas, Pulau Pinang, Malaysia
+                <p className="text-brand-navy/62 leading-8 mt-3">
+                  83 Lintang Bayan Lepas, 11900 Bayan Lepas, Pulau Pinang,
+                  Malaysia
                 </p>
               </div>
               <div>
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-brand-navy/45 mb-2">
-                  Registration Fee
+                <p className="text-[10px] uppercase tracking-[0.24em] font-bold text-brand-navy/45 mb-2">
+                  Registration fee
                 </p>
-                <p className="text-brand-navy/70">Details will be announced closer to launch.</p>
-              </div>
-              <div className="pt-4 border-t border-brand-navy/10">
-                <p className="text-sm text-brand-navy/65 mb-4">
-                  Registration usually includes conference materials, lunch, and
-                  light refreshments.
+                <p className="text-brand-navy/62 leading-8">
+                  Delegates and chairs details will be announced closer to
+                  launch. Registration usually includes conference materials,
+                  lunch, and light refreshments.
                 </p>
-                <a
-                  href="https://forms.gle/your-form-id"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 rounded-full bg-brand-navy px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-gold hover:text-brand-navy transition-colors"
-                >
-                  Register now
-                  <ExternalLink size={14} />
-                </a>
               </div>
+              <a
+                href="https://forms.gle/your-form-id"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 rounded-full bg-brand-navy px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-gold hover:text-brand-navy transition-colors"
+              >
+                Register now
+                <ExternalLink size={14} />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-white text-brand-navy">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-4">
-              Example Committees
+      <section className="py-20 px-6 bg-white text-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mb-12">
+            <p className="text-[11px] uppercase tracking-[0.34em] font-bold text-brand-navy/45 mb-5">
+              Example committees
             </p>
-            <h2 className="text-4xl md:text-6xl font-display font-semibold uppercase leading-[0.95] mb-4">
-              Committees at a glance
+            <h2 className="font-display text-[clamp(2.7rem,5.6vw,4.7rem)] leading-[0.94] uppercase mb-5">
+              Real-world issues, formal debate, serious discussion
             </h2>
-            <p className="max-w-3xl mx-auto text-lg text-brand-navy/65 leading-relaxed">
-              Topics may evolve, but the conference is built around meaningful
-              international issues that challenge delegates to think critically
-              and negotiate responsibly.
+            <p className="text-[18px] leading-9 text-brand-navy/66">
+              Example committees may include UNHRC, UNSC, and other academic
+              bodies focused on human rights, international security, and global
+              policy.
             </p>
           </div>
 
@@ -329,115 +314,95 @@ export default function Home() {
             {COMMITTEES.map((committee) => (
               <div
                 key={committee.id}
-                className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-7 shadow-sm"
+                className="rounded-[2rem] border border-brand-navy/8 bg-[#faf7ef] p-7 shadow-sm"
               >
-                <p className="text-[11px] uppercase tracking-[0.25em] font-bold text-brand-gold mb-3">
+                <p className="text-[11px] uppercase tracking-[0.24em] font-bold text-brand-gold mb-3">
                   {committee.name}
                 </p>
-                <h3 className="text-2xl font-display font-black uppercase leading-tight mb-3">
+                <h3 className="font-display text-3xl uppercase leading-[1] mb-4">
                   {committee.topic}
                 </h3>
-                <p className="text-brand-navy/65 leading-relaxed">
+                <p className="text-brand-navy/66 leading-8">
                   {committee.description}
                 </p>
               </div>
             ))}
           </div>
 
-          <div className="text-center">
-            <Link
-              to="/committees"
-              className="inline-flex items-center justify-center rounded-full border border-brand-navy/20 px-7 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:border-brand-gold hover:text-brand-gold transition-colors"
-            >
-              View Full Committees Page
-            </Link>
-          </div>
+          <Link
+            to="/committees"
+            className="inline-flex items-center justify-center rounded-full border border-brand-navy/12 px-7 py-3 text-xs font-bold uppercase tracking-[0.2em] hover:border-brand-gold hover:text-brand-gold transition-colors"
+          >
+            View full committees page
+          </Link>
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-[#f8f3e8] text-brand-navy">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-4">
-              Secretariat
-            </p>
-            <h2 className="text-4xl md:text-6xl font-display font-semibold uppercase leading-[0.95] mb-4">
-              Meet the student team behind the conference
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-            {featuredTeam.map((member) => (
-              <div key={member.id} className="rounded-[2rem] bg-white p-4 border border-brand-navy/8 shadow-sm">
-                <ProtectedTeamImage
-                  src={member.image}
-                  alt={member.name}
-                  className="rounded-[1.5rem] mb-4"
-                  imageClassName="w-full aspect-[3/4] object-cover rounded-[1.5rem]"
-                />
-                <h3 className="font-display font-black uppercase text-lg leading-tight">
-                  {member.name}
-                </h3>
-                <p className="text-[11px] uppercase tracking-[0.2em] font-bold text-brand-navy/45 mt-1">
-                  {member.position}
-                </p>
+      <section id="contact" className="py-20 px-6 bg-[#f8f3e8] text-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="rounded-[2.5rem] bg-brand-navy text-white px-8 py-14 md:px-14 md:py-16 shadow-sm">
+            <div className="max-w-4xl">
+              <p className="text-[11px] uppercase tracking-[0.32em] font-bold text-white/52 mb-4">
+                Contact us
+              </p>
+              <h2 className="font-display text-[clamp(2.9rem,6vw,5.2rem)] leading-[0.94] uppercase mb-6">
+                Ready to represent your nation?
+              </h2>
+              <p className="max-w-3xl text-[18px] leading-9 text-white/76 mb-8">
+                Register your interest, contact the secretariat, and stay
+                updated on the next POWIIS MUN conference announcement.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <a
+                  href="https://forms.gle/your-form-id"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-brand-gold px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-navy"
+                >
+                  Register now
+                </a>
+                <a
+                  href="mailto:powiismun@powiis.edu.my"
+                  className="inline-flex items-center justify-center rounded-full border border-white/18 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white"
+                >
+                  Contact us
+                </a>
               </div>
-            ))}
-          </div>
 
-          <div className="text-center">
-            <Link
-              to="/team"
-              className="inline-flex items-center justify-center rounded-full bg-brand-navy px-7 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-brand-gold hover:text-brand-navy transition-colors"
-            >
-              View Secretariat
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-24 px-6 bg-white text-brand-navy">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-sm uppercase tracking-[0.32em] font-bold text-brand-navy/45 mb-4">
-            Contact Us
-          </p>
-          <h2 className="text-4xl md:text-5xl font-display font-black uppercase leading-tight mb-4">
-            Ready to represent your nation?
-          </h2>
-          <p className="max-w-3xl mx-auto text-lg text-brand-navy/65 leading-relaxed mb-12">
-            Register your interest, contact the secretariat, and stay updated on
-            the next POWIIS MUN conference announcement.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <a
-              href="mailto:powiismun@powiis.edu.my"
-              className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-8 shadow-sm hover:border-brand-gold transition-colors"
-            >
-              <Mail className="mx-auto mb-4 text-brand-gold" size={28} />
-              <h3 className="font-display font-black uppercase text-2xl mb-2">Email</h3>
-              <p className="text-brand-navy/65 break-all">powiismun@powiis.edu.my</p>
-            </a>
-            <a
-                href="https://www.instagram.com/powiismunc27?igsh=MTVmMDJpMjcxYThhdQ%3D%3D&utm_source=qr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-8 shadow-sm hover:border-brand-gold transition-colors"
-            >
-              <Instagram className="mx-auto mb-4 text-brand-gold" size={28} />
-              <h3 className="font-display font-black uppercase text-2xl mb-2">Instagram</h3>
-              <p className="text-brand-navy/65">@powiismun</p>
-            </a>
-            <a
-              href="https://forms.gle/your-form-id"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-[2rem] border border-brand-navy/8 bg-[#faf6ee] p-8 shadow-sm hover:border-brand-gold transition-colors"
-            >
-              <Calendar className="mx-auto mb-4 text-brand-gold" size={28} />
-              <h3 className="font-display font-black uppercase text-2xl mb-2">Register</h3>
-              <p className="text-brand-navy/65">Submit your interest form</p>
-            </a>
+              <div className="flex flex-wrap items-center gap-5 text-white/74">
+                <a href="mailto:powiismun@powiis.edu.my" className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors">
+                  <Mail size={18} />
+                  <span>powiismun@powiis.edu.my</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/powiismunc27?igsh=MTVmMDJpMjcxYThhdQ%3D%3D&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
+                >
+                  <Instagram size={18} />
+                  <span>@powiismunc27</span>
+                </a>
+                <a
+                  href="https://www.powiis.edu.my"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
+                >
+                  <Globe size={18} />
+                  <span>POWIIS official site</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
+                >
+                  <Linkedin size={18} />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
