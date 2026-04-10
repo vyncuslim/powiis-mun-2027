@@ -11,24 +11,75 @@ const profileSubmissionFormat = [
   "Photo (send to Lea's Whatsapp HD format not here)",
 ];
 
-const submissionStatus = [
-  'Afzan Azmin: advisor - missing',
-  'Sabari Laxmi: member of finance - submitted',
-  'Rio Law: member of academics - submitted',
-  'Sin Yi: member of marketing/design - submitted',
-  'Rae En Chang: member of academics and marketing/design - submitted',
-  'Glavelle Yeoh: member of finance - submitted',
-  'Sean Aariz Shahrul: usg of academics - submitted',
-  'Rin Fujita: member of conference affairs - submitted',
-  'Izaac Lau: secretary - submitted',
-  'Sachinn: deputy secretary general - submitted',
-  'Dhareni Subramaniam: member of marketing/design - submitted',
-  'Saisa Sedhai: member of marketing/design - submitted',
-  'Hyuna ( Sophie ) Chang: member of conference affairs - submitted',
-  'Hayley Guan: usg of design/marketing - submitted',
-  'Wei Jun: member of conference affairs - submitted',
-  'Sim Jiaxin: member of conference affairs - pending',
-  'Romrumpa ( ping ): member of marketing/design - pending',
+const submissionChecklist = [
+  'Afzan Azmin: advisor',
+  '""',
+  '❌',
+  '',
+  'Sabari Laxmi: member of finance',
+  '"The only means of fighting a plague is-common decency"',
+  '✅',
+  '',
+  'Rio Law: member of academics',
+  '"Vision without execution is just hallucination - light bulb guy"',
+  '✅',
+  '',
+  'Sin Yi: member of marketing/design',
+  '"Negotiating peace... or at least group project deadlines."',
+  '✅',
+  '',
+  'Rae En Chang: member of academics and marketing/design',
+  '"Aspire to inspire before you expire"',
+  '✅',
+  '',
+  'Glavelle Yeoh: member of finance',
+  '"anyone,from anywhere, can do anything"',
+  '✅',
+  '',
+  'Sean Aariz Shahrul: usg of academics',
+  '"is this tuff???"',
+  '✅',
+  '',
+  'Rin Fujita: member of conference affairs',
+  '"Memorize to improve, improvise to survive"',
+  '✅',
+  '',
+  'Izaac Lau: secretary',
+  '"Benjamin caught a fish in a net and said: "Yahoo!". This is all real BTW."',
+  '✅',
+  '',
+  'Sachinn: deputy secretary general',
+  '"👋"',
+  '✅',
+  '',
+  'Dhareni Subramaniam: member of marketing/design',
+  '"Gimme some pani puris"',
+  '✅',
+  '',
+  'Saish Sedhai: member of conference affairs',
+  "\"Don't be sorry be better\"",
+  '✅',
+  '',
+  'Hyuna ( Sophie ) Chang: member of conference affairs',
+  '"Be the change that you wish to see in the world"',
+  '✅',
+  '',
+  'Hayley Guan: usg of design/marketing',
+  '"..."',
+  '✅',
+  '',
+  'Wei Jun: member of conference affairs',
+  '"Stars cant shine without brightness"',
+  '✅',
+  '',
+  'Sim Jiaxin: member of conference affairs',
+  '"The only book I want to finish is my passport."',
+  '',
+  'Romrumpa ( ping ): member of marketing/design',
+  '"it will all make sense one day"',
+  '',
+  'Vridhi Chhajer:',
+  '"jaw-jaw is better than war-war -winston churchill"',
 ];
 
 export default function Resources() {
@@ -74,7 +125,7 @@ export default function Resources() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              'Research your country’s background and foreign policy.',
+              "Research your country's background and foreign policy.",
               'Read the committee topic before writing your position paper.',
               'Study the rules of procedure so you can speak with confidence.',
               'Practise drafting clauses and responding to points of information.',
@@ -193,36 +244,26 @@ export default function Resources() {
             <h2 className="text-4xl md:text-5xl font-display font-semibold uppercase leading-[0.95] mb-6">
               Current member checklist
             </h2>
-            <div className="grid gap-3">
-              {submissionStatus.map((item) => {
-                const isSubmitted = item.endsWith('submitted');
-                const isPending = item.endsWith('pending');
-                const statusLabel = isSubmitted ? 'Submitted' : isPending ? 'Pending' : 'Missing';
-                const body = item.replace(/ - (submitted|pending|missing)$/, '');
-
-                return (
-                  <div
-                    key={item}
-                    className="rounded-[1.5rem] border border-white/10 bg-white/5 px-5 py-4 flex items-start justify-between gap-4"
+            <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
+              <div className="space-y-2 whitespace-pre-line text-white/84 leading-8">
+                {submissionChecklist.map((line, index) => (
+                  <p
+                    key={`${line}-${index}`}
+                    className={
+                      line === '✅'
+                        ? 'text-emerald-200 font-bold'
+                        : line === '❌'
+                          ? 'text-rose-200 font-bold'
+                          : ''
+                    }
                   >
-                    <p className="text-white/82 leading-7">{body}</p>
-                    <span
-                      className={`shrink-0 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] ${
-                        isSubmitted
-                          ? 'bg-emerald-400/18 text-emerald-200'
-                          : isPending
-                            ? 'bg-amber-300/18 text-amber-100'
-                            : 'bg-rose-300/18 text-rose-100'
-                      }`}
-                    >
-                      {statusLabel}
-                    </span>
-                  </div>
-                );
-              })}
+                    {line || ' '}
+                  </p>
+                ))}
+              </div>
             </div>
             <p className="mt-6 text-sm text-white/60">
-              USG = Under Secretary General
+              USG = Under secretary general
             </p>
           </div>
         </section>

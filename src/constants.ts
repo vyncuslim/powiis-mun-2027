@@ -19,7 +19,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Izaac',
+    name: 'Izaac Lau',
     position: 'Secretary',
     quote: 'Benjamin caught a fish in a net and said: "Yahoo!". This is all real BTW.',
     image: '/team/izaac-lau.jpeg',
@@ -27,7 +27,7 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '4',
-    name: 'Afzan',
+    name: 'Afzan Azmin',
     position: 'Advisor',
     quote: '',
     image: '/team/afzan.jpeg',
@@ -43,16 +43,16 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '6',
-    name: 'Vridhi',
+    name: 'Vridhi Chhajer',
     position: 'Head of Conference Affairs',
-    quote: '',
+    quote: 'jaw-jaw is better than war-war - winston churchill',
     image: '/team/vridhi.jpeg',
     category: 'Conference',
   },
   {
     id: '7',
-    name: 'Sean',
-    position: 'Head of Academics',
+    name: 'Sean Aariz Shahrul',
+    position: 'USG of academics',
     quote: 'is this tuff???',
     image: '/team/sean-aariz-shahrul.jpeg',
     category: 'Academics',
@@ -72,7 +72,7 @@ export const SECRETARIAT: TeamMember[] = [
   {
     id: '9',
     name: 'Hayley Guan',
-    position: 'Head of Marketing',
+    position: 'USG of design/marketing',
     quote: '...',
     image: '/team/hayley-guan.jpeg',
     category: 'PR',
@@ -135,11 +135,11 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '17',
-    name: 'Saisa Sedhai',
-    position: 'member of marketing/design',
-    quote: 'uh im saisa',
+    name: 'Saish Sedhai',
+    position: 'member of conference affairs',
+    quote: "Don't be sorry be better",
     image: '/team/saisa-sedhai.jpeg',
-    category: 'PR',
+    category: 'Conference',
   },
   {
     id: '18',
@@ -159,11 +159,19 @@ export const SECRETARIAT: TeamMember[] = [
   },
   {
     id: '20',
-    name: 'Sim Jia Xin',
+    name: 'Sim Jiaxin',
     position: 'member of conference affairs',
     quote: 'The only book I want to finish is my passport.',
     image: '/team/sim-jia-xin.jpeg',
     category: 'Conference',
+  },
+  {
+    id: '21',
+    name: 'Romrumpa ( Ping )',
+    position: 'member of marketing/design',
+    quote: 'it will all make sense one day',
+    image: '/picture.jpeg',
+    category: 'PR',
   },
 ];
 
