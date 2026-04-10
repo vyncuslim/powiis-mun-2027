@@ -84,8 +84,8 @@ export default function AboutUs() {
           >
             <div className="bg-white rounded-[2rem] p-4 border border-brand-navy/8 shadow-sm">
               <ProtectedTeamImage
-                src="/team/about-hero.jpeg"
-                alt="POWIIS MUN leadership"
+                src="/team/afzan-azmin.jpeg"
+                alt="Lea Tan"
                 className="rounded-[1.5rem]"
                 imageClassName="w-full aspect-[4/5] object-cover rounded-[1.5rem]"
               />

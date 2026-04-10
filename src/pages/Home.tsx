@@ -9,7 +9,6 @@ import {
   ExternalLink,
   Instagram,
   Globe,
-  Linkedin,
 } from 'lucide-react';
 import { Logo } from '../components/Logo';
 import { ProtectedTeamImage } from '../components/ProtectedTeamImage';
@@ -112,8 +111,8 @@ export default function Home() {
             >
               <div className="rounded-[2.1rem] border border-brand-navy/8 bg-white p-5 shadow-sm">
                 <ProtectedTeamImage
-                  src="/team/vyncus-lim.jpeg"
-                  alt="POWIIS MUN student leader"
+                  src="/team/afzan-azmin.jpeg"
+                  alt="Lea Tan"
                   className="rounded-[1.6rem]"
                   imageClassName="w-full aspect-[4/5] object-cover object-top rounded-[1.6rem]"
                 />
@@ -391,15 +390,6 @@ export default function Home() {
                 >
                   <Globe size={18} />
                   <span>POWIIS official site</span>
-                </a>
-                <a
-                  href="https://www.linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 hover:text-brand-gold transition-colors"
-                >
-                  <Linkedin size={18} />
-                  <span>LinkedIn</span>
                 </a>
               </div>
             </div>
