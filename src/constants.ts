@@ -177,7 +177,7 @@ export const SECRETARIAT: TeamMember[] = [
     name: 'Saish Sedhai',
     position: 'member of conference affairs',
     quote: "Don't be sorry be better",
-    image: '/team/saisa-sedhai.jpeg',
+    image: '/team/saish-sedhai.jpeg',
     category: 'Conference',
   },
   {
