@@ -5,37 +5,31 @@ export const TEAM_SECTIONS: TeamSection[] = [
     id: 'core',
     title: 'Core Secretariat',
     categories: ['Core'],
-    columns: 4,
   },
   {
     id: 'conference',
-    title: 'Conference Affairs',
+    title: 'Conference Affairs Division',
     categories: ['Conference'],
-    columns: 3,
   },
   {
     id: 'academics',
-    title: 'Academics',
+    title: 'Academics Division',
     categories: ['Academics'],
-    columns: 3,
   },
   {
     id: 'finance',
-    title: 'Finance',
+    title: 'Finance Division',
     categories: ['Finance'],
-    columns: 3,
   },
   {
     id: 'marketing',
-    title: 'Design & Marketing',
+    title: 'Design & Marketing Division',
     categories: ['PR', 'Marketing'],
-    columns: 4,
   },
   {
     id: 'it',
-    title: 'Information Technology',
+    title: 'Information Technology Division',
     categories: ['IT'],
-    columns: 2,
   },
 ];
 

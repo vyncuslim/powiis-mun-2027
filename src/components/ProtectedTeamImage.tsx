@@ -7,6 +7,7 @@ type ProtectedTeamImageProps = {
   alt: string;
   className?: string;
   imageClassName?: string;
+  variant?: 'default' | 'editorial';
 };
 
 export function ProtectedTeamImage({
@@ -14,6 +15,7 @@ export function ProtectedTeamImage({
   alt,
   className = '',
   imageClassName = '',
+  variant = 'default',
 }: ProtectedTeamImageProps) {
   const [currentSrc, setCurrentSrc] = React.useState(src);
 
@@ -44,12 +46,16 @@ export function ProtectedTeamImage({
         onDragStart={blockAssetAction}
         draggable={false}
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy/16 via-transparent to-white/8" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center">
-        <div className="rounded-full bg-brand-navy/55 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.24em] text-white/80 backdrop-blur-sm">
-          POWIIS MUN
-        </div>
-      </div>
+      {variant === 'default' && (
+        <>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-navy/16 via-transparent to-white/8" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center">
+            <div className="rounded-full bg-brand-navy/55 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.24em] text-white/80 backdrop-blur-sm">
+              POWIIS MUN
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

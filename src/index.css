@@ -54,6 +54,30 @@
     @apply absolute inset-0 bg-brand-navy/40 mix-blend-multiply;
   }
 
+  .team-profile-photo {
+    @apply mx-auto w-full max-w-2xl bg-white;
+  }
+
+  .team-section-title {
+    @apply font-display text-[clamp(2rem,6vw,3.25rem)] italic text-[#6b4a3a] leading-tight;
+  }
+
+  .team-role-title {
+    @apply font-serif text-lg md:text-xl italic text-[#6b4a3a] underline decoration-[#6b4a3a]/45 underline-offset-4;
+  }
+
+  .team-member-name {
+    @apply mt-3 text-2xl md:text-[1.75rem] font-semibold text-brand-navy;
+  }
+
+  .team-member-bio {
+    @apply mt-5 max-w-2xl text-[17px] leading-8 text-brand-navy/88;
+  }
+
+  .team-profile-divider {
+    @apply my-14 md:my-16 border-t border-brand-navy/20;
+  }
+
   .team-photo-protected {
     -webkit-user-select: none;
     user-select: none;
