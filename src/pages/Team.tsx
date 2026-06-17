@@ -21,6 +21,7 @@ function formatPosition(position: string) {
       part
         .trim()
         .replace(/\busg of\b/gi, 'Under-Secretary-General of')
+        .replace(/\bconference affaris\b/gi, 'conference affairs')
         .replace(/\busg\b/gi, 'Under-Secretary-General')
         .replace(/\bmember of\b/gi, 'Member of')
         .replace(/\bhead of\b/gi, 'Head of'),

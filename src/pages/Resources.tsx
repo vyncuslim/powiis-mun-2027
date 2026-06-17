@@ -17,7 +17,7 @@ const submissionChecklist = [
   '❌',
   '',
   'Sabari Laxmi: member of finance',
-  '"The only means of fighting a plague is-common decency"',
+  '"The only means of fighting a plague is—common decency"',
   '✅',
   '',
   'Rio Law: member of academics',
@@ -25,7 +25,7 @@ const submissionChecklist = [
   '✅',
   '',
   'Sin Yi: member of marketing/design',
-  '"Negotiating peace... or at least group project deadlines."',
+  '"Negotiating peace… or at least group project deadlines."',
   '✅',
   '',
   'Rae En Chang: member of academics and marketing/design',
@@ -49,15 +49,15 @@ const submissionChecklist = [
   '✅',
   '',
   'Sachinn: deputy secretary general',
-  '"👋"',
+  '""',
   '✅',
   '',
   'Dhareni Subramaniam: member of marketing/design',
   '"Gimme some pani puris"',
   '✅',
   '',
-  'Saish Sedhai: member of conference affairs',
-  "\"Don't be sorry be better\"",
+  'Saisa Sedhai: member of marketing/design',
+  '"uh im saisa"',
   '✅',
   '',
   'Hyuna ( Sophie ) Chang: member of conference affairs',
@@ -72,14 +72,19 @@ const submissionChecklist = [
   '"Stars cant shine without brightness"',
   '✅',
   '',
-  'Sim Jiaxin: member of conference affairs',
+  'Sim Jiaxin: Member of conference affairs',
   '"The only book I want to finish is my passport."',
   '',
-  'Romrumpa ( ping ): member of marketing/design',
-  '"it will all make sense one day"',
+  'Saish Sedhai: member of conference affairs',
+  '"Don\'t be sorry be better"',
   '',
-  'Vridhi Chhajer:',
-  '"jaw-jaw is better than war-war -winston churchill"',
+  'Romrumpa ( ping ): member of marketing/design',
+  '" it will all make sense one day "',
+  '',
+  'Vridhi Chhajer: usg of conference affaris',
+  '"jaw-jaw is better than war-war -winston chruchill"',
+  '',
+  'USG-> Under secretary general',
 ];
 
 export default function Resources() {
@@ -245,7 +250,7 @@ export default function Resources() {
               Current member checklist
             </h2>
             <div className="rounded-[1.75rem] border border-white/10 bg-white/5 p-6">
-              <div className="space-y-2 whitespace-pre-line text-white/84 leading-8">
+              <div className="space-y-2 whitespace-pre-line text-white/84 leading-8 font-mono text-sm">
                 {submissionChecklist.map((line, index) => (
                   <p
                     key={`${line}-${index}`}
@@ -263,7 +268,7 @@ export default function Resources() {
               </div>
             </div>
             <p className="mt-6 text-sm text-white/60">
-              USG = Under secretary general
+              USG = Under Secretary General
             </p>
           </div>
         </section>
