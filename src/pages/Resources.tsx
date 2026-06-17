@@ -14,7 +14,7 @@ const profileSubmissionFormat = [
 const submissionChecklist = [
   'Afzan Azmin: advisor',
   '""',
-  '❌',
+  '✅',
   '',
   'Sabari Laxmi: member of finance',
   '"The only means of fighting a plague is—common decency"',
