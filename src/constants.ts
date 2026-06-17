@@ -1,4 +1,43 @@
-import { TeamMember, Resource, Committee } from './types';
+import { TeamMember, Resource, Committee, TeamSection } from './types';
+
+export const TEAM_SECTIONS: TeamSection[] = [
+  {
+    id: 'core',
+    title: 'Core Secretariat',
+    categories: ['Core'],
+    columns: 4,
+  },
+  {
+    id: 'conference',
+    title: 'Conference Affairs',
+    categories: ['Conference'],
+    columns: 3,
+  },
+  {
+    id: 'academics',
+    title: 'Academics',
+    categories: ['Academics'],
+    columns: 3,
+  },
+  {
+    id: 'finance',
+    title: 'Finance',
+    categories: ['Finance'],
+    columns: 3,
+  },
+  {
+    id: 'marketing',
+    title: 'Design & Marketing',
+    categories: ['PR', 'Marketing'],
+    columns: 4,
+  },
+  {
+    id: 'it',
+    title: 'Information Technology',
+    categories: ['IT'],
+    columns: 2,
+  },
+];
 
 export const SECRETARIAT: TeamMember[] = [
   {
@@ -174,6 +213,13 @@ export const SECRETARIAT: TeamMember[] = [
     category: 'PR',
   },
 ];
+
+export function getGroupedSecretariat() {
+  return TEAM_SECTIONS.map((section) => ({
+    ...section,
+    members: SECRETARIAT.filter((member) => section.categories.includes(member.category)),
+  })).filter((section) => section.members.length > 0);
+}
 
 export const RESOURCES: Resource[] = [
   {

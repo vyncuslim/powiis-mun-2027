@@ -1,3 +1,14 @@
+export type TeamDepartment =
+  | 'Core'
+  | 'Conference'
+  | 'Academics'
+  | 'Finance'
+  | 'PR'
+  | 'IT'
+  | 'Marketing'
+  | 'Logistics'
+  | 'Delegates';
+
 export interface TeamMember {
   id: string;
   name: string;
@@ -5,11 +16,18 @@ export interface TeamMember {
   quote: string;
   image: string;
   photos?: string[];
-  category: 'Core' | 'Academics' | 'Marketing' | 'Conference' | 'IT' | 'Finance' | 'Logistics' | 'PR' | 'Delegates';
+  category: TeamDepartment;
   linkedin?: string;
   instagram?: string;
   website?: string;
   bio?: string;
+}
+
+export interface TeamSection {
+  id: string;
+  title: string;
+  categories: TeamDepartment[];
+  columns?: 2 | 3 | 4;
 }
 
 export interface Resource {
