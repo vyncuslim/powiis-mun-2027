@@ -265,8 +265,8 @@ export default function Home() {
                   Prince of Wales Island International School
                 </p>
                 <p className="text-brand-navy/62 leading-8 mt-3">
-                  83 Lintang Bayan Lepas, 11900 Bayan Lepas, Pulau Pinang,
-                  Malaysia
+                  1 Jalan Sungai Air Putih 6, Bandar Baru Air Putih, 11000
+                  Balik Pulau, Penang, Malaysia
                 </p>
               </div>
               <div>

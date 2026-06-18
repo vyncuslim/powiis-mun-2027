@@ -234,7 +234,7 @@ export const RESOURCES: Resource[] = [
     id: 'r2',
     title: 'Rules of Procedure',
     description: 'The formal rules for debate and resolution.',
-    link: 'https://www.myadp.org/_files/ugd/88a5d7_99175ae8edb149f18b59a801eeef90bd.pdf',
+    link: '#',
   },
   {
     id: 'r3',
